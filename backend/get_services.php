@@ -19,7 +19,7 @@ require_once 'db/db_connect.php';
 try {
     $query = "SELECT id, title, description, images_url FROM services ORDER BY id DESC";
     $stmt = $conn->query($query);
-    $services = $stmt->fetch_all();
+    $services = $stmt->fetch_all(MYSQLI_ASSOC);
 
     http_response_code(200);
     echo json_encode([

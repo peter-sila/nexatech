@@ -8,11 +8,12 @@ function Contactus() {
     <div className="contact-us">
       < Header />
       <div className="c-hero">
-        <p>Contact Us</p>
+        <h2>Let’s Architect Your Next-Gen Infrastructure.</h2>
+        <p>Ready to eliminate manual business bottlenecks, optimize data pathways, or scale your core backends? Connect directly with a systems architect to outline your software engineering and workflow automation goals today.</p>
       </div>
       <div className="contact-us-form">
         <h2>Reach Out To Us</h2>
-        <p>Reach out to us we respond immediately.</p>
+        <p>Drop us a line to discuss your software engineering, cloud integration, or system automation blueprints.</p>
         <div className="contact-infor">
           <div className="infor">
             <a href="mailto:petersila2002@gmail.com">info@nexatech.co.ke</a>

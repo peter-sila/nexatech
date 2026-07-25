@@ -13,10 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 require_once 'db/db_connect.php';
 
 try {
-    $sql = "SELECT title, sub_title, category, content, author, is_published, created_at FROM blogs";
+    $sql = "SELECT id, title, sub_title, category, content, author, is_published, created_at FROM blogs";
             
     $stmt = $conn->query($sql);
-    $blogs = $stmt->fetch_all();
+    $blogs = $stmt->fetch_all(MYSQLI_ASSOC);
 
     http_response_code(200);
     echo json_encode([
