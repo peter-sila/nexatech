@@ -5,6 +5,8 @@ import Services from './pages/services'
 import Aboutus from './pages/about-us'
 import Contactus from './pages/contact-us'
 import Blogs from './pages/blogs'
+import ViewService from './pages/view-service'
+import ViewBlog from './pages/blog-view'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="/about-us" element={<Aboutus/>} />
           <Route path="/contact-us" element={<Contactus/>} />
           <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/view-service/" element={<ViewService/>} />
+          <Route path="/view-blog/" element={<ViewBlog/>} />
         </Routes>
       </BrowserRouter>
     </>

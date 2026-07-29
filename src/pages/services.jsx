@@ -7,31 +7,18 @@ import '../css/services.css'
 
 function Services() {
   
-  const [servicesList, setServicesList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [networkError, setNetworkError] = useState(null)
-
-  useEffect(() => {
-    fetch("http://localhost:8000/get_services.php")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Unable to establish communication with the services engine.");
-        }
-        return response.json();
-      })
-      .then((payload) => {
-        if (payload.status === "success") {
-          setServicesList(payload.data);
-        } else {
-          setServicesList(Array.isArray(payload) ? payload : []);
-        }
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setNetworkError(error.message);
-        setIsLoading(false);
-      });
-  }, []);
+  const [servicesList, setServicesList] = useState([
+    {"id":"8","title":"Automated Quality Assurance & Continuous Security Testing","description":"Embedding automated end-to-end user path scripting, unit testing blocks, and code security checks directly into development pipelines to maintain total application uptime.","images_url":"assets/images/services/automated-testing.jpg"},
+    {"id":"7","title":"AI-Driven Data Pipelines & Predictive Analytics Automation","description":"Designing automated data ingestion networks (ETL) integrated with predictive machine learning models to synthesize analytics dashboards and spot operational anomalies.","images_url":"assets/images/services/predictive-analytics.jpg"},
+    {"id":"6","title":"Legacy System Modernization & Cloud Migrations","description":"Upgrading brittle, monolithic software platforms and obsolete database structures into lean, microservices-driven cloud instances with zero active runtime business disruption.","images_url":"assets/images/services/legacy-modernization.jpg"},
+    {"id":"5","title":"Cloud Infrastructure & DevOps Automation","description":"Modernizing server environments via automated continuous integration and delivery pipelines (CI/CD), containerized microservices deployment, and adaptive cloud autoscaling.","images_url":"assets/images/services/devops-infrastructure.jpg"},
+    {"id":"4","title":"Enterprise API Engineering & System Integration","description":"Developing secure, lightning-fast, and deeply documented application programming interfaces (REST/GraphQL) enforcing strict OAuth2/JWT token identity validations.","images_url":"assets/images/services/api-integrations.jpg"},
+    {"id":"3","title":"Business Process & Ecosystem Workflow Automation","description":"Connecting disjointed corporate applications and eliminating data silos through custom middleware orchestration frameworks and secure automated data triggers.","images_url":"assets/images/services/workflow-orchestration.jpg"},
+    {"id":"2","title":"Intelligent Robotic Process Automation (RPA)","description":"Transforming operational efficiency by deploying cognitive software bots that automate repetitive, rules-based tasks across corporate legacy applications without breaking existing workflows.","images_url":"assets/images/services/robotic-automation.jpg"},
+    {"id":"1","title":"Enterprise Custom Software Engineering","description":"Architecting, building, and deploying robust, tailored software systems engineered to solve complex operational challenges using scalable frameworks and secure database layers.","images_url":"assets/images/services/enterprise-software.jpg"}
+  ]);
+  const [isLoading] = useState(false);
+  const [networkError] = useState(null);
   
   return (
     <div className="services">
@@ -74,7 +61,7 @@ function Services() {
                 />
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <Link to={`/service/${service.id}`} className="read-more-btn">
+                <Link to={`/view-service/${service.id}`} className="read-more-btn">
                   Read More
                 </Link>
               </div>

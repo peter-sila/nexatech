@@ -22,14 +22,15 @@ function Contactus() {
             <address>Nairobi, Kenya</address>
           </div>
           <div className="form">
-            <form action="formHandler" method="post">
+            <form action="" method="post" encType="text/plain">
               <p>Send a Message</p>
               <div className="group-form">
-                <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" />
-                <input type="email" name="email" id="email" placeholder="Enter Your Email Address" />
+                <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" required />
+                <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required />
               </div>
-              <input type="number" name="phonenumber" id="phonenumber" placeholder="Enter Your Phone Number" />
-              <textarea name="message" id="message" rows="5" placeholder="Enter Your Message Here"></textarea>
+              <input type="number" name="phonenumber" id="phonenumber" placeholder="Enter Your Phone Number" required />
+              <textarea name="message" id="message" rows="5" placeholder="Enter Your Message Here" required></textarea>
+              <button type="submit">Send Message</button>
             </form>
           </div>
         </div>
