@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -7,7 +7,7 @@ import '../css/home.css'
 
 function Home() {
     
-  const [servicesList, setServicesList] = useState([
+  const [servicesList] = useState([
     {"id":"8","title":"Automated Quality Assurance & Continuous Security Testing","description":"Embedding automated end-to-end user path scripting, unit testing blocks, and code security checks directly into development pipelines to maintain total application uptime.","images_url":"assets/images/services/automated-testing.jpg"},
     {"id":"7","title":"AI-Driven Data Pipelines & Predictive Analytics Automation","description":"Designing automated data ingestion networks (ETL) integrated with predictive machine learning models to synthesize analytics dashboards and spot operational anomalies.","images_url":"assets/images/services/predictive-analytics.jpg"},
     {"id":"6","title":"Legacy System Modernization & Cloud Migrations","description":"Upgrading brittle, monolithic software platforms and obsolete database structures into lean, microservices-driven cloud instances with zero active runtime business disruption.","images_url":"assets/images/services/legacy-modernization.jpg"},
@@ -17,8 +17,8 @@ function Home() {
     {"id":"2","title":"Intelligent Robotic Process Automation (RPA)","description":"Transforming operational efficiency by deploying cognitive software bots that automate repetitive, rules-based tasks across corporate legacy applications without breaking existing workflows.","images_url":"assets/images/services/robotic-automation.jpg"},
     {"id":"1","title":"Enterprise Custom Software Engineering","description":"Architecting, building, and deploying robust, tailored software systems engineered to solve complex operational challenges using scalable frameworks and secure database layers.","images_url":"assets/images/services/enterprise-software.jpg"}
   ]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [networkError, setNetworkError] = useState(null)
+  const [isLoading] = useState(false);
+  const [networkError] = useState(null)
   
   return(
     <div className="home">
@@ -27,31 +27,12 @@ function Home() {
       <div className="h-hero">
         <h2>Next-Gen Software Development Powered by Intelligent Automation.</h2>
         <p>From custom enterprise applications to automated continuous integration pipelines, we deliver the decoupled architectures and cloud-native solutions your business needs to stay ahead.</p>
-        <a href="">What We Build</a>
-        <a href="">Start Your Project</a>
+        <Link to="/services">What We Build</Link>
+        <Link to="/contact-us">Start Your Project</Link>
       </div>
       <div className="services">
         <h2>Transform Your Operations with Our Proven Services</h2>
         <p>We help growing companies scale faster and work smarter through custom strategies, hands-on support, and industry-leading expertise.</p>
-        
-        {isLoading && (
-          <div className="loading-state" style={{ padding: "40px", textAlign: "center" }}>
-            <h4>Syncing Services...</h4>
-          </div>
-        )}
-
-        {networkError && (
-          <div className="error-state" style={{ padding: "40px", textAlign: "center", color: "#dc3545" }}>
-            <h4>Data Fetch Failed</h4>
-            <p>{networkError}</p>
-          </div>
-        )}
-
-        {!isLoading && !networkError && servicesList.length === 0 && (
-          <div className="empty-state" style={{ padding: "40px", textAlign: "center" }}>
-            <p>No published services found in the repository index.</p>
-          </div>
-        )}
 
         {!isLoading && !networkError && servicesList.length > 0 && (
           <div className="cards">
@@ -60,6 +41,7 @@ function Home() {
                 <img 
                   src={service.images_url || "assets/images/service-placeholder.jpg"} 
                   alt={service.title} 
+                  className="service-image"
                 />
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>

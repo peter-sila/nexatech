@@ -58,6 +58,7 @@ function Blogs() {
                 <img 
                   src={blog.images_url || "assets/images/blog-placeholder.jpg"} 
                   alt={blog.title} 
+                  className="blog-image"
                 />
                 
                 <div className="info">

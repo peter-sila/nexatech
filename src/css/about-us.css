@@ -1,0 +1,82 @@
+:root {
+  --primary: #0f766e;
+  --primary-dark: #0b5e5a;
+  --accent: #2dd4bf;
+  --accent-strong: #14b8a6;
+  --surface: #f4fbfc;
+  --text: #10353c;
+  --muted: #5d7680;
+  --white: #ffffff;
+  --border: rgba(15, 118, 110, 0.16);
+}
+
+.aboutus {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f7fdff 0%, #eefcfb 100%);
+}
+
+.aboutus .a-hero {
+  padding: 4.5rem 1.5rem 3rem;
+  text-align: center;
+  background: linear-gradient(120deg, rgba(15, 118, 110, 0.16), rgba(45, 212, 191, 0.16));
+}
+
+.aboutus .a-hero h2 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin-bottom: 1rem;
+  color: #0f2f22;
+}
+
+.aboutus .a-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.aboutus .who-we-are,
+.aboutus .core-value {
+  padding: 3rem 1.5rem;
+}
+
+.aboutus .who-we-are h2,
+.aboutus .core-value h2 {
+  color: #0f2f22;
+  margin-bottom: 0.7rem;
+}
+
+.aboutus .who-we-are p,
+.aboutus .core-value p {
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.aboutus .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.aboutus .card {
+  padding: 1.3rem;
+  background: var(--white);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(25, 58, 42, 0.08);
+}
+
+.aboutus .card h3 {
+  color: var(--accent-strong);
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 640px) {
+  .aboutus .a-hero,
+  .aboutus .who-we-are,
+  .aboutus .core-value {
+    padding: 2.2rem 1rem;
+  }
+}

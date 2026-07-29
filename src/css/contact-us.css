@@ -1,0 +1,128 @@
+:root {
+  --primary: #0f766e;
+  --primary-dark: #0b5e5a;
+  --accent: #2dd4bf;
+  --accent-strong: #14b8a6;
+  --surface: #f4fbfc;
+  --text: #10353c;
+  --muted: #5d7680;
+  --white: #ffffff;
+  --border: rgba(15, 118, 110, 0.16);
+}
+
+.contact-us {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f7fdff 0%, #eefcfb 100%);
+}
+
+.contact-us .c-hero {
+  padding: 4.5rem 1.5rem 3rem;
+  text-align: center;
+  background: linear-gradient(120deg, rgba(15, 118, 110, 0.16), rgba(45, 212, 191, 0.16));
+}
+
+.contact-us .c-hero h2 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  color: #0f2f22;
+  margin-bottom: 1rem;
+}
+
+.contact-us .c-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.contact-us .contact-us-form {
+  padding: 3rem 1.5rem;
+}
+
+.contact-us .contact-us-form h2 {
+  color: #0f2f22;
+  margin-bottom: 0.6rem;
+}
+
+.contact-us .contact-us-form > p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.contact-us .contact-infor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.contact-us .infor {
+  background: linear-gradient(135deg, #ff7a00, #2e8b57);
+  color: #fff;
+  padding: 1.4rem;
+  border-radius: 20px;
+}
+
+.contact-us .infor a,
+.contact-us .infor address {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-us .form {
+  background: var(--white);
+  padding: 1.3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(12, 36, 26, 0.08);
+}
+
+.contact-us .group-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.contact-us textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-us button {
+  border: none;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff7a00, #2e8b57);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-us .our-location {
+  padding: 0 1.5rem 3rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .contact-us .c-hero,
+  .contact-us .contact-us-form,
+  .contact-us .our-location {
+    padding: 2.3rem 1rem;
+  }
+
+  .contact-us .group-form {
+    grid-template-columns: 1fr;
+  }
+}

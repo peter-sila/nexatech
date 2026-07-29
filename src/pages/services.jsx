@@ -26,7 +26,7 @@ function Services() {
       <div className="s-hero">
         <h2>Transform Your Operations with Our Proven Services</h2>
         <p>We help growing companies scale faster and work smarter through custom strategies, hands-on support, and industry-leading expertise.</p>
-        <a href="">Book a Free Consultation</a>
+        <Link to="/contact-us">Book a Free Consultation</Link>
       </div>
       <div className="list-services">
         <h2>Transform Your Operations with Our Proven Services</h2>
@@ -58,6 +58,7 @@ function Services() {
                 <img 
                   src={service.images_url || "assets/images/service-placeholder.jpg"} 
                   alt={service.title} 
+                  className="service-image"
                 />
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
