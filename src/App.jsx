@@ -22,8 +22,8 @@ function App() {
           <Route path="/about-us" element={<Aboutus/>} />
           <Route path="/contact-us" element={<Contactus/>} />
           <Route path="/blogs" element={<Blogs/>} />
-          <Route path="/view-service/" element={<ViewService/>} />
-          <Route path="/view-blog/" element={<ViewBlog/>} />
+          <Route path="/view-service/:id" element={<ViewService/>} />
+          <Route path="/blog-view/:id" element={<ViewBlog/>} />
         </Routes>
       </BrowserRouter>
     </>

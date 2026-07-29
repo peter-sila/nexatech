@@ -74,7 +74,7 @@ function Blogs() {
                 </div>
                 <h3>{blog.title}</h3>
                 <p>{blog.sub_title}</p>
-                <Link to={`/blog-view/${blog.id}`} className="read-more-btn">
+                <Link to={`/blog-view/${blog.id}`} state={{ blog }} className="read-more-btn">
                   Read More
                 </Link>
               </div>

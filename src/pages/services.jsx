@@ -62,7 +62,7 @@ function Services() {
                 />
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <Link to={`/view-service/${service.id}`} className="read-more-btn">
+                <Link to={`/view-service/${service.id}`} state={{ service }} className="read-more-btn">
                   Read More
                 </Link>
               </div>

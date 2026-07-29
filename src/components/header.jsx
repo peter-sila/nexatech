@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <div className="header">
-        <ul>
+        <ul> 
           <li><a href="tel:+254794178635">0794178635</a></li>
           <li><a href="tel:+254782416883">0782416883</a></li>
           <li><a href="mailto:petersila2002@gmail.com">info@nexatech.co.ke</a></li>
