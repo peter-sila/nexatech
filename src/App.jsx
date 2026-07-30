@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Analytics } from "@vercel/analytics/next"
 import Home from './pages/home'
 import Services from './pages/services'
 import Aboutus from './pages/about-us'
