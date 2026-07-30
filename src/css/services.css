@@ -107,9 +107,25 @@
   font-weight: 600;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .services .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   .services .s-hero,
   .services .list-services {
     padding: 2.4rem 1rem;
+  }
+
+  .services .cards {
+    grid-template-columns: 1fr;
   }
 }

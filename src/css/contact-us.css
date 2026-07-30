@@ -115,6 +115,18 @@
   color: var(--muted);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .contact-us .contact-infor {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .contact-us .c-hero,
   .contact-us .contact-us-form,
@@ -124,5 +136,9 @@
 
   .contact-us .group-form {
     grid-template-columns: 1fr;
+  }
+
+  .contact-us button {
+    width: 100%;
   }
 }

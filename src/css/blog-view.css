@@ -106,6 +106,16 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 900px) {
+  .view-blog-page {
+    padding: 3rem 1rem;
+  }
+
+  .view-blog-page .article-card {
+    padding: 1.6rem;
+  }
+}
+
 @media (max-width: 640px) {
   .view-blog-page {
     padding: 2.25rem 1rem;
@@ -113,5 +123,9 @@
 
   .view-blog-page .article-card {
     padding: 1.4rem;
+  }
+
+  .view-blog-page .article-meta {
+    border-radius: 16px;
   }
 }

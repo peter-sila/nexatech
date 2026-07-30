@@ -98,9 +98,25 @@
   font-weight: 600;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .blogs .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   .blogs .b-hero,
   .blogs .blog-cards {
     padding: 2.3rem 1rem;
+  }
+
+  .blogs .cards {
+    grid-template-columns: 1fr;
   }
 }
