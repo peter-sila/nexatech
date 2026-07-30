@@ -20,6 +20,7 @@
   padding: 4.5rem 1.5rem 3rem;
   text-align: center;
   background: linear-gradient(120deg, rgba(15, 118, 110, 0.16), rgba(45, 212, 191, 0.16));
+  background-image: url(../assets/Innovative-IT.jpg);
 }
 
 .contact-us .c-hero h2 {

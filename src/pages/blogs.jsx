@@ -56,7 +56,7 @@ function Blogs() {
             {blogsList.map((blog) => (
               <div className="card" key={blog.id}>
                 <img 
-                  src={blog.images_url || "assets/images/blog-placeholder.jpg"} 
+                  src={blog.images_url || "../assets/win-lap.jpg"} 
                   alt={blog.title} 
                   className="blog-image"
                 />
