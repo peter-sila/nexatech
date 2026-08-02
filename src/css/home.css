@@ -34,8 +34,26 @@ img {
 .home .h-hero {
   padding: 5rem 1.5rem 4rem;
   text-align: center;
-  background: linear-gradient(120deg, rgba(15, 118, 110, 0.16), rgba(45, 212, 191, 0.16));
-  background-image: url("../assets/win-lap.jpg");
+  background-image: linear-gradient(120deg, rgba(8, 31, 29, 0.45), rgba(10, 66, 60, 0.35)), url("../assets/win-lap.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .h-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.home .h-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .home .h-hero h2 {
@@ -97,6 +115,8 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.4rem;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .home .card {

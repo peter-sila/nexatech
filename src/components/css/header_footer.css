@@ -51,6 +51,11 @@
   padding: 0 20px;
 }
 
+.nav_bar .nav-cta {
+  padding: 0.7rem 1.2rem;
+  margin-left: 0.6rem;
+}
+
 .nav_bar a:hover {
   color: #0f766e;
 }
@@ -122,9 +127,10 @@
 .nav-cta {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: var(--white);
-  padding: 2rem 1.3rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 999px;
   font-weight: 700;
+  margin-left: 0.6rem;
 }
 
 .mobile-cta {
@@ -143,6 +149,22 @@
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.footer-flex .navlinks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.footer-flex .reach-us ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
 }
 
 .footer p {

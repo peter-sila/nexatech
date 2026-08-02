@@ -19,8 +19,26 @@
 .blogs .b-hero {
   padding: 4.5rem 1.5rem 3rem;
   text-align: center;
-  background: linear-gradient(120deg, rgba(15, 118, 110, 0.16), rgba(45, 212, 191, 0.16));
-  background-image: url(../assets/Mon-lap.jpg);
+  background-image: linear-gradient(120deg, rgba(8, 31, 29, 0.45), rgba(10, 66, 60, 0.35)), url(../assets/Mon-lap.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.blogs .b-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.blogs .b-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .blogs .b-hero h2 {
@@ -38,6 +56,7 @@
 
 .blogs .blog-cards {
   padding: 3rem 1.5rem;
+  margin: 0 auto;
 }
 
 .blogs .blog-cards h3 {
@@ -49,6 +68,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 1.3rem;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .blogs .card {

@@ -19,8 +19,26 @@
 .aboutus .a-hero {
   padding: 4.5rem 1.5rem 3rem;
   text-align: center;
-  background: linear-gradient(120deg, rgba(15, 118, 110, 0.16), rgba(45, 212, 191, 0.16));
-  background-image: url(../assets/Programming-bg.jpg);
+  background-image: linear-gradient(120deg, rgba(8, 31, 29, 0.45), rgba(10, 66, 60, 0.35)), url(../assets/Programming-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutus .a-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.aboutus .a-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .aboutus .a-hero h2 {

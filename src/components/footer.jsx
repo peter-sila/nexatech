@@ -24,7 +24,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p>&copy2025. Nexatech. All Rights Reserved.</p>
+      <p>&copy; 2025. Nexatech. All Rights Reserved.</p>
     </div>
   )
 }
