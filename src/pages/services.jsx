@@ -4,18 +4,27 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import CallToAction from "../components/cta";
 import '../css/services.css'
+import AI_Software from '../assets/AI-Software.jpg'
+import Future_AI from '../assets/Future-AI.jpg'
+import Invisible from '../assets/invisible.jpg'
+import Innovative_IT from '../assets/Innovative-IT.jpg'
+import Top_View from '../assets/Top-view.jpg'
+import Pro_Software from '../assets/Pro-Software.jpg'
+import Win_Lap from '../assets/win-lap.jpg'
+import Lap_Brain from '../assets/Lap-brain.jpg'
+import Mon_Lap from '../assets/Mon-lap.jpg'
 
 function Services() {
   
   const [servicesList, setServicesList] = useState([
-    {"id":"8","title":"Automated Quality Assurance & Continuous Security Testing","description":"Embedding automated end-to-end user path scripting, unit testing blocks, and code security checks directly into development pipelines to maintain total application uptime.","images_url":"../assets/AI-Software.jpg"},
-    {"id":"7","title":"AI-Driven Data Pipelines & Predictive Analytics Automation","description":"Designing automated data ingestion networks (ETL) integrated with predictive machine learning models to synthesize analytics dashboards and spot operational anomalies.","images_url":"../assets/Future-AI.jpg"},
-    {"id":"6","title":"Legacy System Modernization & Cloud Migrations","description":"Upgrading brittle, monolithic software platforms and obsolete database structures into lean, microservices-driven cloud instances with zero active runtime business disruption.","images_url":"../assets/invisibl.jpg"},
-    {"id":"5","title":"Cloud Infrastructure & DevOps Automation","description":"Modernizing server environments via automated continuous integration and delivery pipelines (CI/CD), containerized microservices deployment, and adaptive cloud autoscaling.","images_url":"../assets/Innovative IT.jpg"},
-    {"id":"4","title":"Enterprise API Engineering & System Integration","description":"Developing secure, lightning-fast, and deeply documented application programming interfaces (REST/GraphQL) enforcing strict OAuth2/JWT token identity validations.","images_url":"../assets/Programmong bg.jpg"},
-    {"id":"3","title":"Business Process & Ecosystem Workflow Automation","description":"Connecting disjointed corporate applications and eliminating data silos through custom middleware orchestration frameworks and secure automated data triggers.","images_url":"../assets/win-lap.jpg"},
-    {"id":"2","title":"Intelligent Robotic Process Automation (RPA)","description":"Transforming operational efficiency by deploying cognitive software bots that automate repetitive, rules-based tasks across corporate legacy applications without breaking existing workflows.","images_url":"../assets/Lap-brain.jpg"},
-    {"id":"1","title":"Enterprise Custom Software Engineering","description":"Architecting, building, and deploying robust, tailored software systems engineered to solve complex operational challenges using scalable frameworks and secure database layers.","images_url":"../assets/Mon-lap.jpg"}
+    {"id":"8","title":"Automated Quality Assurance & Continuous Security Testing","description":"Embedding automated end-to-end user path scripting, unit testing blocks, and code security checks directly into development pipelines to maintain total application uptime.","images_url": AI_Software},
+    {"id":"7","title":"AI-Driven Data Pipelines & Predictive Analytics Automation","description":"Designing automated data ingestion networks (ETL) integrated with predictive machine learning models to synthesize analytics dashboards and spot operational anomalies.","images_url": Future_AI},
+    {"id":"6","title":"Legacy System Modernization & Cloud Migrations","description":"Upgrading brittle, monolithic software platforms and obsolete database structures into lean, microservices-driven cloud instances with zero active runtime business disruption.","images_url": Invisible},
+    {"id":"5","title":"Cloud Infrastructure & DevOps Automation","description":"Modernizing server environments via automated continuous integration and delivery pipelines (CI/CD), containerized microservices deployment, and adaptive cloud autoscaling.","images_url": Top_View},
+    {"id":"4","title":"Enterprise API Engineering & System Integration","description":"Developing secure, lightning-fast, and deeply documented application programming interfaces (REST/GraphQL) enforcing strict OAuth2/JWT token identity validations.","images_url": Pro_Software},
+    {"id":"3","title":"Business Process & Ecosystem Workflow Automation","description":"Connecting disjointed corporate applications and eliminating data silos through custom middleware orchestration frameworks and secure automated data triggers.","images_url": Innovative_IT},
+    {"id":"2","title":"Intelligent Robotic Process Automation (RPA)","description":"Transforming operational efficiency by deploying cognitive software bots that automate repetitive, rules-based tasks across corporate legacy applications without breaking existing workflows.","images_url": Win_Lap},
+    {"id":"1","title":"Enterprise Custom Software Engineering","description":"Architecting, building, and deploying robust, tailored software systems engineered to solve complex operational challenges using scalable frameworks and secure database layers.","images_url": Mon_Lap}
   ]);
   const [isLoading] = useState(false);
   const [networkError] = useState(null);

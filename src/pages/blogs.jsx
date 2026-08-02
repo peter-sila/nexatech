@@ -4,6 +4,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import CallToAction from "../components/cta";
 import '../css/blogs.css';
+import BlogCover from '../assets/Programming-bg.jpg';
+import BlogCoverAlt from '../assets/Future-AI.jpg';
 
 function Blogs() {
 
@@ -56,7 +58,7 @@ function Blogs() {
             {blogsList.map((blog) => (
               <div className="card" key={blog.id}>
                 <img 
-                  src={blog.images_url || "../assets/win-lap.jpg"} 
+                  src={blog.images_url || (Number(blog.id) % 2 === 0 ? BlogCoverAlt : BlogCover)} 
                   alt={blog.title} 
                   className="blog-image"
                 />
