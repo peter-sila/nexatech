@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { inject } from '@vercel/analytics'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Home from './pages/home'
 import Services from './pages/services'
 import Aboutus from './pages/about-us'
@@ -8,8 +8,6 @@ import Contactus from './pages/contact-us'
 import Blogs from './pages/blogs'
 import ViewService from './pages/view-service'
 import ViewBlog from './pages/blog-view'
-
-inject();
 
 function App() {
   const [count, setCount] = useState(0)

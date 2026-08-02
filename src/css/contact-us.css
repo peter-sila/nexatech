@@ -19,7 +19,7 @@
 .contact-us .c-hero {
   padding: 4.5rem 1.5rem 3rem;
   text-align: center;
-  background-image: linear-gradient(120deg, rgba(8, 31, 29, 0.45), rgba(10, 66, 60, 0.35)), url(../assets/Innovative-IT.jpg);
+  background-image: linear-gradient(120deg, rgba(8, 31, 29, 0.5), rgba(10, 66, 60, 0.38)), url(../assets/Innovative-IT.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
   position: absolute;
   inset: 0;
   backdrop-filter: blur(2px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   pointer-events: none;
 }
 
@@ -41,9 +41,27 @@
   z-index: 1;
 }
 
-.contact-us .c-hero h2 {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  color: #0f2f22;
+.contact-us .hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-us .eyebrow {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #f4fdff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.contact-us .c-hero h1 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  color: #f8fffe;
   margin-bottom: 1rem;
 }
 
@@ -51,35 +69,76 @@
   max-width: 760px;
   margin: 0 auto;
   line-height: 1.7;
-  color: var(--muted);
+  color: rgba(244, 253, 255, 0.94);
+}
+
+.contact-us .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.contact-us .hero-btn,
+.contact-us .text-link {
+  display: inline-block;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-us .hero-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+}
+
+.contact-us .text-link {
+  color: #f4fdff;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .contact-us .contact-us-form {
   padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.contact-us .contact-us-form h2 {
+.contact-us .section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2rem;
+}
+
+.contact-us .section-heading h2 {
   color: #0f2f22;
   margin-bottom: 0.6rem;
 }
 
-.contact-us .contact-us-form > p {
+.contact-us .section-heading > p {
   color: var(--muted);
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
 .contact-us .contact-infor {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.4rem;
   align-items: start;
 }
 
 .contact-us .infor {
-  background: linear-gradient(135deg, #ff7a00, #2e8b57);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #fff;
   padding: 1.4rem;
   border-radius: 20px;
+  box-shadow: 0 16px 35px rgba(11, 36, 28, 0.14);
+}
+
+.contact-us .infor h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
 }
 
 .contact-us .infor a,
@@ -90,11 +149,38 @@
   text-decoration: none;
 }
 
+.contact-us .contact-highlights {
+  padding-left: 1rem;
+  margin: 1rem 0 1.2rem;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.7;
+}
+
+.contact-us .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.contact-us .contact-links a {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+}
+
 .contact-us .form {
   background: var(--white);
   padding: 1.3rem;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(12, 36, 26, 0.08);
+}
+
+.contact-us .form p {
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--primary-dark);
 }
 
 .contact-us .group-form {
@@ -112,6 +198,7 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   font-size: 0.95rem;
+  background: #fbfeff;
 }
 
 .contact-us textarea {
@@ -123,7 +210,7 @@
   border: none;
   padding: 0.8rem 1.1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ff7a00, #2e8b57);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #fff;
   font-weight: 700;
   cursor: pointer;
@@ -132,6 +219,20 @@
 .contact-us .our-location {
   padding: 0 1.5rem 3rem;
   color: var(--muted);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-us .location-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.3rem 1.4rem;
+}
+
+.contact-us .location-card h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
 }
 
 img {
