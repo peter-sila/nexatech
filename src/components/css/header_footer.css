@@ -218,6 +218,10 @@
 }
 
 @media (max-width: 640px) {
+  .header {
+    display: none;
+  }
+
   .nav_bar {
     flex-wrap: wrap;
     gap: 0.8rem;
@@ -240,5 +244,38 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 1.25rem;
+  }
+
+  .footer-flex .navlinks {
+    align-items: center;
+  }
+
+  .footer-flex .navlinks a {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav_bar {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .logo,
+  .logo-d a {
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
   }
 }

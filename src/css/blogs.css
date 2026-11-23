@@ -135,10 +135,59 @@ img {
 @media (max-width: 640px) {
   .blogs .b-hero,
   .blogs .blog-cards {
-    padding: 2.3rem 1rem;
+    padding: 2.25rem 1rem;
   }
 
   .blogs .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .blogs .card {
+    min-width: 0;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .blogs .card img,
+  .blogs .blog-image {
+    height: clamp(140px, 48vw, 220px);
+  }
+
+  .blogs .card h3 {
+    font-size: clamp(1.1rem, 5vw, 1.35rem);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .blogs .card p,
+  .blogs .info {
+    font-size: 0.95rem;
+  }
+
+  .blogs .read-more-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .blogs .b-hero,
+  .blogs .blog-cards {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .blogs .b-hero h2 {
+    font-size: 1.55rem;
+  }
+
+  .blogs .card {
+    padding: 0.85rem;
+  }
+
+  .blogs .card p,
+  .blogs .info {
+    font-size: 0.9rem;
   }
 }

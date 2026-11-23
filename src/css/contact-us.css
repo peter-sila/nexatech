@@ -251,14 +251,76 @@ img {
   .contact-us .c-hero,
   .contact-us .contact-us-form,
   .contact-us .our-location {
-    padding: 2.3rem 1rem;
+    padding: 2.1rem 1rem;
+  }
+
+  .contact-us .c-hero h1 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .contact-us .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 26rem;
+    margin-inline: auto;
+  }
+
+  .contact-us .hero-btn,
+  .contact-us .text-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-us .contact-infor {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .contact-us .infor,
+  .contact-us .form,
+  .contact-us .location-card {
+    min-width: 0;
+    padding: 1rem;
+    border-radius: 16px;
   }
 
   .contact-us .group-form {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
   }
 
   .contact-us button {
     width: 100%;
+    min-height: 44px;
+  }
+
+  .contact-us input,
+  .contact-us textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-us .c-hero,
+  .contact-us .contact-us-form,
+  .contact-us .our-location {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .contact-us .infor,
+  .contact-us .form,
+  .contact-us .location-card {
+    padding: 0.85rem;
+  }
+
+  .contact-us .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .contact-us .contact-links a {
+    padding: 0.5rem 0.65rem;
   }
 }

@@ -40,3 +40,24 @@
 .cta .subscribers-json {
   display: none;
 }
+
+@media (max-width: 480px) {
+  .cta {
+    margin: 1rem;
+    padding: 1.75rem 1rem;
+    border-radius: 18px;
+  }
+
+  .cta .subsc {
+    flex-direction: column;
+  }
+
+  .cta input,
+  .cta button {
+    width: 100%;
+  }
+
+  .cta input {
+    min-width: 0;
+  }
+}

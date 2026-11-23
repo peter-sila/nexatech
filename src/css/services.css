@@ -144,10 +144,57 @@ img {
 @media (max-width: 640px) {
   .services .s-hero,
   .services .list-services {
-    padding: 2.4rem 1rem;
+    padding: 2.25rem 1rem;
   }
 
   .services .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .services .card {
+    min-width: 0;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .services .card img,
+  .services .service-image {
+    height: clamp(140px, 48vw, 220px);
+  }
+
+  .services .card h3 {
+    font-size: clamp(1.1rem, 5vw, 1.35rem);
+    line-height: 1.35;
+  }
+
+  .services .card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .services .read-more-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .services .s-hero,
+  .services .list-services {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .services .s-hero h2 {
+    font-size: 1.65rem;
+  }
+
+  .services .card {
+    padding: 0.85rem;
+  }
+
+  .services .card p {
+    font-size: 0.9rem;
   }
 }

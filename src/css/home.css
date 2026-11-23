@@ -194,21 +194,64 @@ img {
 
 @media (max-width: 640px) {
   .home .h-hero {
-    padding: 4rem 1rem 3rem;
+    padding: 3.25rem 1rem 2.5rem;
   }
 
   .home .services,
   .home .about-us,
   .home .why-choose-us {
-    padding: 2.5rem 1rem;
+    padding: 2.25rem 1rem;
   }
 
   .home .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .home .card {
+    min-width: 0;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .home .h-hero h2 {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .home .h-hero p,
+  .home .card p,
+  .home .about-info p {
+    font-size: 0.95rem;
   }
 
   .home .h-hero a {
     display: block;
     margin: 0.5rem 0;
+    min-height: 44px;
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home .h-hero {
+    padding: 2.75rem 0.75rem 2rem;
+  }
+
+  .home .services,
+  .home .about-us,
+  .home .why-choose-us {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .home .card {
+    padding: 0.85rem;
+  }
+
+  .home .card img,
+  .home .service-image,
+  .home .about-image,
+  .home .benefit-image {
+    height: 150px;
   }
 }
