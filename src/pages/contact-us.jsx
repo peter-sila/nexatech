@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -6,6 +6,8 @@ import CallToAction from "../components/cta";
 import '../css/contact-us.css'
 
 function Contactus() {
+  const [showEmailNotice, setShowEmailNotice] = useState(false);
+
   useEffect(() => {
     document.title = "Contact NexaTech | Software Development & IT Consulting in Kenya";
 
@@ -71,16 +73,26 @@ function Contactus() {
           </div>
 
           <div className="form">
-            <form action="" method="post" encType="text/plain">
-              <p>Send a message</p>
-              <div className="group-form">
-                <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required />
-                <input type="email" name="email" id="email" placeholder="Enter your email address" required />
+            {showEmailNotice ? (
+              <div role="status" aria-live="polite">
+                <p>Your message has not been sent through this form. Please email it to our team:</p>
+                <a href="mailto:petersila2002@gmail.com">info@nexatech.co.ke</a>
               </div>
-              <input type="number" name="phonenumber" id="phonenumber" placeholder="Enter your phone number" required />
-              <textarea name="message" id="message" rows="5" placeholder="Tell us about your project or idea" required></textarea>
-              <button type="submit">Send Message</button>
-            </form>
+            ) : (
+              <form onSubmit={(event) => {
+                event.preventDefault();
+                setShowEmailNotice(true);
+              }}>
+                <p>Send a message</p>
+                <div className="group-form">
+                  <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required />
+                  <input type="email" name="email" id="email" placeholder="Enter your email address" required />
+                </div>
+                <input type="number" name="phonenumber" id="phonenumber" placeholder="Enter your phone number" required />
+                <textarea name="message" id="message" rows="5" placeholder="Tell us about your project or idea" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            )}
           </div>
         </div>
       </section>
